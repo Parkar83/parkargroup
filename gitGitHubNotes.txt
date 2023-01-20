@@ -1,0 +1,93 @@
+1- Create Github account:
+
+Github is used for manageming our project/ code on cloude/remote 
+
+	gitgit remote add origin "$ git remote add origin "https://github.com/Parkar83/parkargroup.git"
+"
+
+2- Obtain and copy Github (Remote) Repsitory URL:
+
+https://github.com/Parkar83/parkargroup.git
+
+3- Create a folder in your local machine to establish local repository
+
+4- Install Git in your local machine
+
+Git (Local) repository is used to manage our project/code in our local machine and if we want to push it over cloud
+
+5- In order to set our local folder as our local repository for all our project codes we need to right click on our local foldar and select git bash here
+
+6- type following command : git init (this command will initialize the our local folder to git for further use)
+7- if we want to clean the page, we type : Git clear
+8- now we need to integrate our local repository with github (remote/cloud) repository by typing following commands:
+
+- git remote add origin "https://github.com/Parkar83/parkargroup.git" (this will integrate local to remote repository) and enter
+- now every thing we have in our local repository will be stored in to our github (cloud/remote) repository under master branch
+
+
+- we have established connection between local and remote repository by creating github account and installing git in to our machine and initializing our local folder via git
+- in this stage now we are going to start editing, copying, pushing and pulling code between local and remote repository.
+- Master branch is our main branch, branch is nothing but a folder.
+
+9 - now we are going to pull the files from remote repository (github) to our local (git):
+
+ - type this command: git pull origin main (enter)
+ - now all my files that was in github (remote) repository is pulled in to my local repository (local folder/directory), open the folder to verify
+ Note: Step 9 is mostly used in case that we want to pull or have the project/code for the first time in our local. 
+ Note: its worthmentioning that in real time scenarios, we cannot use our pc as local repository, there would be virtual machines on cloud or shared network for local repositories
+ Note: As Github is used for manageming our porjects via cloud, we can only perform limited actions by editing our readme file and some small actions, we cannot edit code or write code via Github UI.
+ Note: Git and SVN performs same duty only diffrence is the name of vendor/company
+
+10-  now we create some new file in to our local repository (git) and push that in to our github (remote/ cloud) repository as followings:
+ - we created a folder inside our local repository folder, but it is yet not part of our git
+ - in order to get this newely created file (test1.txt) in to our git, we need to type following code to commit the file as part of git, but before that we check the status of our local repo to check what files we have up to now:
+	git status (will show us status of our local repo in red color)
+	
+11- now in order to add this newly created test1.txt file in to our git, we first have to add the file in to index, index is an intermediate layer between git and github by typing following command:
+	To add:
+
+	git add test1.txt
+
+
+note: if we have one file to commit, we only type git add and the name of the file, else we type following command:
+		git add -a (this means add all files from local repo to index for commiting to remote)
+12- after we added file in to index, we will commit the file in order to add it in to our git from our local machine to our local repo for pushing in to remote:
+
+	git commit -m "type test here" (enter)
+
+	note: -m "" is used to type any comments or details or reason for our commit
+13- now we check the status once again to see what files are commited in to our Git from our local machine and is ready to be pushed to our remote repo
+	git status
+14- now we will push the commited file from our Git (local repo) to our Github (remote repo)
+	git push
+if we want to commit test file to Git we type:
+	git commit "filename"
+15- now we are going to commit multiple files from our local machine to our git, we create new test files and also modify one of the existing files then we will push/commit those files in to our git(local repo) and then push it to or remote rep
+
+- now we type git status and verify that we have one file that is modified and two other files that are newely created but not yet part of git as it shows in red
+
+	git add -A (enter) now this will add all our modified and newly created test files from our local folder to index and prepare it for commit to be pushed to our logal Git and then pushed to our remot Github repo:
+	git status (verify if all files are added in to index layer)
+Note: to add files in to index layer fot commiting to Git we type git add -A (use capital A)
+16- Now we commit all(multiple) files in to our git from index layer:
+
+	git commit -a -m "commiting multiple files in to git local repo"
+
+note: in order to commit files from index to git we type git commit -a (lower case a) -m "" ( comments for purpose of commit)
+
+17- git log is used to provide you the details of what ever so far we have commited or performed in our git
+
+note:
+
+git add (adding files in to index)
+
+git commit (what ever file added in to index is to be commited or pushed in tao git local repo)
+
+
+18- now before pushing the code in to remote repo we need to pull everything in to our local git repo and then we will push:
+	git pull origin main
+
+now we go to our github remote repo ui and refresh the url
+
+
+git push origin master ( this code will help push all our commited files in our Git local repo to our github remote repo:
